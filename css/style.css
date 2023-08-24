@@ -1,0 +1,272 @@
+body,
+p,
+h1,
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/*ESTRUTURA GERAL*/
+
+.estrutura-geral {
+  display: grid;
+}
+
+/*HEADER */
+
+.header {
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header li + li {
+  margin-left: 30px;
+}
+
+.header nav a {
+  display: block;
+  color: white;
+  padding: 10px;
+  font-size: 1.125rem;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: 0.1s;
+}
+
+.header nav a:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* INTRODUÇÃO*/
+
+.introducao {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 40px 20px;
+  margin: 0 auto;
+  gap: 100px;
+  align-items: center;
+}
+
+.introducao h1 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  text-align: end;
+  color: #b07dfb;
+  text-transform: capitalize;
+}
+
+.introducao p {
+  text-align: end;
+}
+
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .introducao h1 {
+    text-align: center;
+    margin-top: auto;
+  }
+
+  .introducao p {
+    text-align: center;
+  }
+}
+
+.footer {
+  background: linear-gradient(to left, #8844ee, #b07dfb);
+  padding: 30px;
+  color: #ffffff;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/*SOBRE*/
+
+.content-container {
+  background: #ffffff;
+}
+
+.content {
+  max-width: 1200px;
+  padding: 70px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  gap: 100px;
+}
+
+.content h2 {
+  font-size: 8rem;
+  color: #b07dfb;
+  line-height: 1;
+  max-width: 4ch;
+}
+
+.content h2:hover {
+  color: #8844ee;
+}
+
+.sobre {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+.sobre p span {
+  color: #b07dfb;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .content h2 {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .sobre p {
+    margin-top: 0px;
+  }
+}
+
+.cursos-container {
+  max-width: 1200px;
+  padding: 120px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+}
+
+.sobre-introducao p {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: #777;
+}
+
+.sobre-introducao p span {
+  color: #8844ee;
+  font-weight: bold;
+}
+
+.cursos-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.faculdade {
+  flex: 1;
+  background: #b07dfb;
+  border-radius: 5px;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.faculdade:hover {
+  background: #ba8dfc;
+}
+
+.faculdade-tipo {
+  font-size: 0.875em;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.faculdade-curso {
+  flex: 1;
+  font-size: 1.125rem;
+  margin-bottom: 40px;
+  line-height: 1.14;
+  color: #4e18a1;
+  position: relative;
+}
+
+.faculdade-curso::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  left: -24px;
+}
+
+.faculdade-instituicao {
+  font-size: 0.875rem;
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .cursos-container {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-introducao p {
+    font-size: 1.5rem;
+  }
+}
+
+.contato-container {
+  max-width: 1200px;
+  padding: 120px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 200px;
+}
+
+.social li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-items: center;
+  border-bottom: 1px solid #b07dfb;
+}
+
+.social li:nth-child(4) {
+  border-bottom: none;
+}
+
+@media (max-width: 800px) {
+  .contato-container {
+    grid-template-columns: 1fr;
+    gap: 100px;
+  }
+}
